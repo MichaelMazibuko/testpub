@@ -1,0 +1,505 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0.0",
+    "title" : "jabuapi"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/jabuapi",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/jabuapi" : {
+      "post" : {
+        "tags" : [ "jabuapi" ],
+        "operationId" : "postJabuService",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "postJabuService_request",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/postJabuService_request"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "normal response",
+            "schema" : {
+              "$ref" : "#/definitions/postJabuService_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "postJabuService_request" : {
+      "type" : "object",
+      "properties" : {
+        "XMM701_MSG" : {
+          "type" : "object",
+          "properties" : {
+            "XMM701_INPUT" : {
+              "type" : "object",
+              "properties" : {
+                "XMM701_ACCOUNT_NUMBER" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999999
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "postJabuService_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "XMM701_MSG" : {
+          "type" : "object",
+          "properties" : {
+            "XMM701_OUTPUT" : {
+              "type" : "object",
+              "properties" : {
+                "XMM701_ERROR_CODE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999
+                },
+                "XMM701_ERROR_DESCR" : {
+                  "type" : "string",
+                  "maxLength" : 30
+                },
+                "XMM701_CLIENT_TITLE" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_CLIENT_INITIALS" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_CLIENT_SURNAME" : {
+                  "type" : "string",
+                  "maxLength" : 60
+                },
+                "XMM701_CLIENT_LANGUAGE" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_K061_LOAN_NUMBER" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999999
+                },
+                "XMM701_K081_ACCOUNT_NUMBER" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999999
+                },
+                "XMM701_DATE_OPENED" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_OUTSTANDING_BALANCE" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_REQOPT" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_TERMDATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_INSTAL_STATUS" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_EFF_ACCT_RATE" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -999.9999,
+                  "maximum" : 999.9999
+                },
+                "XMM701_COMMITMENT_GROSS" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_OLD_ACCOUNT_NO" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999999
+                },
+                "XMM701_OLD_ACCOUNT_PROD" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_NOMINATED_ACC_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_ORIG_COMM_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_NEW_COMM_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_RETENTION_AMOUNT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_INTEREST_LIMIT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_PERF_GUARANTEE" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_FEE_PROVISION" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_DEBIT_ORDER_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_ORIGINAL_TERM" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_ORIG_START_AMOUNT" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999999
+                },
+                "XMM701_NEXT_PAYMENT_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_CONVERT_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_REPAYMENT_AMOUNT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM1WS_REPAYMENT_FREQ" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999
+                },
+                "XMM701_REM_TERM_YYY" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_REM_TERM_MMM" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_RATE_TYPE" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_JIBAR_TERM" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_ACCOUNT_NAME" : {
+                  "type" : "string",
+                  "maxLength" : 20
+                },
+                "XMM701_DATE_SETTLE_NOTICE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_SETTLE_OTHER_ACC" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_OCS_DELINQ_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_OCS_RISK_CODE" : {
+                  "type" : "string",
+                  "maxLength" : 3
+                },
+                "XMM701_OCS_RISK_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_OCS_DAYS_DELINQ" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999
+                },
+                "XMM701_FLEXI_OPTION" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_FLEXI_FEE_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_FLEXI_FEE_CONS" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : 0,
+                  "maximum" : 999.9999
+                },
+                "XMM701_DEBIT_ORDER_TP_DESC" : {
+                  "type" : "string",
+                  "maxLength" : 5
+                },
+                "XMM701_FIXED_DO_AMOUNT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : 0,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_DEBIT_ORDER_DESC" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "XMM701_ACCOUNT_TYPE_CAT" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999
+                },
+                "XMM701_IDUP_DEFAULT_DATE" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_IDUP_EXPOSURE" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_IDUP_COST_CREDIT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_IDUP_STBLCK_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_OUTST_CAP_UNPD_BAL" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_UNPD_INT" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_UNPD_CHRGS" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_BULLET_AMOUNT_28" : {
+                  "type" : "number",
+                  "format" : "decimal",
+                  "minimum" : -9999999999999.99,
+                  "maximum" : 9999999999999.99
+                },
+                "XMM701_DAY_COUNT_IND" : {
+                  "type" : "string",
+                  "maxLength" : 1
+                },
+                "XMM701_SKIPHOLIDAY_IND" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9
+                },
+                "XMM701_GRANTS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "XMM701_DATE_LOAN_GRANTED" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 99999999
+                      },
+                      "XMM701_LOAN_AMOUNT" : {
+                        "type" : "integer",
+                        "minimum" : -9999999999999999,
+                        "maximum" : 9999999999999999
+                      },
+                      "XMM701_TOT_LOAN_GRANTED" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 9999999999999999
+                      },
+                      "XMM701_LOAN_TYPE" : {
+                        "type" : "string",
+                        "maxLength" : 5
+                      },
+                      "XMM701_APPROV_MANDATE" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 9999999
+                      },
+                      "XMM701_ORIG_GRANT1" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 9999999999999999
+                      }
+                    }
+                  },
+                  "maxItems" : 10,
+                  "minItems" : 10
+                },
+                "XMM701_HOLDS" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "XMM701_HOLDS_CODE" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 99999
+                      },
+                      "XMM701_HOLDS_DATE" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 99999999
+                      }
+                    }
+                  },
+                  "maxItems" : 10,
+                  "minItems" : 10
+                },
+                "XMM701_UNCLR" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "XMM701_DATE_PROCESSED" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 99999999
+                      },
+                      "XMM701_EVENT_NUMBER" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 999999999
+                      },
+                      "XMM701_TRANS_AMOUNT" : {
+                        "type" : "number",
+                        "format" : "decimal",
+                        "minimum" : -9999999999999.99,
+                        "maximum" : 9999999999999.99
+                      },
+                      "XMM701_CLEARANCE_DAYS" : {
+                        "type" : "integer",
+                        "minimum" : -9999999,
+                        "maximum" : 9999999
+                      },
+                      "XMM701_DATE_CLEARED" : {
+                        "type" : "integer",
+                        "minimum" : 0,
+                        "maximum" : 99999999
+                      }
+                    }
+                  },
+                  "maxItems" : 10,
+                  "minItems" : 10
+                },
+                "XMM701_DATE_8" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_TIME_8" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 99999999
+                },
+                "XMM701_CHANGE_FIELD" : {
+                  "type" : "string",
+                  "maxLength" : 50
+                },
+                "XMM701_CHANGE_FROM" : {
+                  "type" : "string",
+                  "maxLength" : 50
+                },
+                "XMM701_CHANGE_TO" : {
+                  "type" : "string",
+                  "maxLength" : 50
+                },
+                "XMM701_TRAN_FUNC" : {
+                  "type" : "string",
+                  "maxLength" : 9
+                },
+                "XMM701_BY_7" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 9999999
+                },
+                "XMM701_OVERRIDE_BY" : {
+                  "type" : "integer",
+                  "minimum" : 0,
+                  "maximum" : 999999999
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

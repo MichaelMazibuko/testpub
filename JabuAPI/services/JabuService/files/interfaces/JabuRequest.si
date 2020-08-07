@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="JabuRequest" direction="0" serviceType="IMS">
+    <message id="1" name="JabuRequest">
+        <segment id="1" name="Segment 1" originalName="Segment 1">
+            <field name="XMM701_MSG" originalName="XMM701_MSG" included="Y" path="XMM701_MSG">
+                <startPos>1</startPos>
+                <bytes>2075</bytes>
+                <maxBytes>2075</maxBytes>
+                <marshaller alignment="NATURAL"/>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="IMSI_LL" originalName="IMSI_LL" included="N" path="XMM701_MSG.IMSI_LL">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="IMSI_ZZ" originalName="IMSI_ZZ" included="N" path="XMM701_MSG.IMSI_ZZ">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="XMM701_TRAN" originalName="XMM701_TRAN" included="N" path="XMM701_MSG.XMM701_TRAN">
+                    <startPos>5</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="XMM701_DELIMITER" originalName="XMM701_DELIMITER" included="N" path="XMM701_MSG.XMM701_DELIMITER">
+                    <startPos>9</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="XMM701_FUNCTION" originalName="XMM701_FUNCTION" included="N" path="XMM701_MSG.XMM701_FUNCTION">
+                    <startPos>10</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="XMM701_INPUT" originalName="XMM701_INPUT" included="Y" path="XMM701_MSG.XMM701_INPUT">
+                    <startPos>14</startPos>
+                    <bytes>16</bytes>
+                    <maxBytes>16</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="XMM701_ACCOUNT_NUMBER" originalName="XMM701_ACCOUNT_NUMBER" included="Y" path="XMM701_MSG.XMM701_INPUT.XMM701_ACCOUNT_NUMBER">
+                        <startPos>14</startPos>
+                        <bytes>16</bytes>
+                        <maxBytes>16</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                    </field>
+                </field>
+                <field name="XMM701_OUTPUT" originalName="XMM701_OUTPUT" included="N" path="XMM701_MSG.XMM701_OUTPUT">
+                    <startPos>30</startPos>
+                    <bytes>2046</bytes>
+                    <maxBytes>2046</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="XMM701_ERROR_CODE" originalName="XMM701_ERROR_CODE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ERROR_CODE">
+                        <startPos>30</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="5" scale="0"/>
+                    </field>
+                    <field name="XMM701_ERROR_DESCR" originalName="XMM701_ERROR_DESCR" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ERROR_DESCR">
+                        <startPos>35</startPos>
+                        <bytes>30</bytes>
+                        <maxBytes>30</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CLIENT_TITLE" originalName="XMM701_CLIENT_TITLE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CLIENT_TITLE">
+                        <startPos>65</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CLIENT_INITIALS" originalName="XMM701_CLIENT_INITIALS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CLIENT_INITIALS">
+                        <startPos>70</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CLIENT_SURNAME" originalName="XMM701_CLIENT_SURNAME" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CLIENT_SURNAME">
+                        <startPos>75</startPos>
+                        <bytes>60</bytes>
+                        <maxBytes>60</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CLIENT_LANGUAGE" originalName="XMM701_CLIENT_LANGUAGE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CLIENT_LANGUAGE">
+                        <startPos>135</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_K061_LOAN_NUMBER" originalName="XMM701_K061_LOAN_NUMBER" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_K061_LOAN_NUMBER">
+                        <startPos>136</startPos>
+                        <bytes>16</bytes>
+                        <maxBytes>16</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                    </field>
+                    <field name="XMM701_K081_ACCOUNT_NUMBER" originalName="XMM701_K081_ACCOUNT_NUMBER" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_K081_ACCOUNT_NUMBER">
+                        <startPos>152</startPos>
+                        <bytes>16</bytes>
+                        <maxBytes>16</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                    </field>
+                    <field name="XMM701_DATE_OPENED" originalName="XMM701_DATE_OPENED" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DATE_OPENED">
+                        <startPos>168</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_OUTSTANDING_BALANCE" originalName="XMM701_OUTSTANDING_BALANCE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OUTSTANDING_BALANCE">
+                        <startPos>176</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_REQOPT" originalName="XMM701_REQOPT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_REQOPT">
+                        <startPos>191</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_TERMDATE" originalName="XMM701_TERMDATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_TERMDATE">
+                        <startPos>194</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_INSTAL_STATUS" originalName="XMM701_INSTAL_STATUS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_INSTAL_STATUS">
+                        <startPos>202</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_EFF_ACCT_RATE" originalName="XMM701_EFF_ACCT_RATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_EFF_ACCT_RATE">
+                        <startPos>217</startPos>
+                        <bytes>7</bytes>
+                        <maxBytes>7</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="7" scale="4"/>
+                    </field>
+                    <field name="XMM701_COMMITMENT_GROSS" originalName="XMM701_COMMITMENT_GROSS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_COMMITMENT_GROSS">
+                        <startPos>224</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_OLD_ACCOUNT_NO" originalName="XMM701_OLD_ACCOUNT_NO" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OLD_ACCOUNT_NO">
+                        <startPos>239</startPos>
+                        <bytes>16</bytes>
+                        <maxBytes>16</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                    </field>
+                    <field name="XMM701_OLD_ACCOUNT_PROD" originalName="XMM701_OLD_ACCOUNT_PROD" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OLD_ACCOUNT_PROD">
+                        <startPos>255</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_NOMINATED_ACC_IND" originalName="XMM701_NOMINATED_ACC_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_NOMINATED_ACC_IND">
+                        <startPos>260</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_ORIG_COMM_DATE" originalName="XMM701_ORIG_COMM_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ORIG_COMM_DATE">
+                        <startPos>261</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_NEW_COMM_DATE" originalName="XMM701_NEW_COMM_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_NEW_COMM_DATE">
+                        <startPos>269</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_RETENTION_AMOUNT" originalName="XMM701_RETENTION_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_RETENTION_AMOUNT">
+                        <startPos>277</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_INTEREST_LIMIT" originalName="XMM701_INTEREST_LIMIT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_INTEREST_LIMIT">
+                        <startPos>292</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_PERF_GUARANTEE" originalName="XMM701_PERF_GUARANTEE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_PERF_GUARANTEE">
+                        <startPos>307</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_FEE_PROVISION" originalName="XMM701_FEE_PROVISION" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_FEE_PROVISION">
+                        <startPos>322</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_DEBIT_ORDER_IND" originalName="XMM701_DEBIT_ORDER_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DEBIT_ORDER_IND">
+                        <startPos>337</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_ORIGINAL_TERM" originalName="XMM701_ORIGINAL_TERM" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ORIGINAL_TERM">
+                        <startPos>338</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_ORIG_START_AMOUNT" originalName="XMM701_ORIG_START_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ORIG_START_AMOUNT">
+                        <startPos>341</startPos>
+                        <bytes>16</bytes>
+                        <maxBytes>16</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                    </field>
+                    <field name="XMM701_NEXT_PAYMENT_DATE" originalName="XMM701_NEXT_PAYMENT_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_NEXT_PAYMENT_DATE">
+                        <startPos>357</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_CONVERT_IND" originalName="XMM701_CONVERT_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CONVERT_IND">
+                        <startPos>365</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_REPAYMENT_AMOUNT" originalName="XMM701_REPAYMENT_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_REPAYMENT_AMOUNT">
+                        <startPos>366</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM1WS_REPAYMENT_FREQ" originalName="XMM1WS_REPAYMENT_FREQ" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM1WS_REPAYMENT_FREQ">
+                        <startPos>381</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="5" scale="0"/>
+                    </field>
+                    <field name="XMM701_REM_TERM_YYY" originalName="XMM701_REM_TERM_YYY" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_REM_TERM_YYY">
+                        <startPos>386</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_REM_TERM_MMM" originalName="XMM701_REM_TERM_MMM" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_REM_TERM_MMM">
+                        <startPos>389</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_RATE_TYPE" originalName="XMM701_RATE_TYPE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_RATE_TYPE">
+                        <startPos>392</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_JIBAR_TERM" originalName="XMM701_JIBAR_TERM" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_JIBAR_TERM">
+                        <startPos>397</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_ACCOUNT_NAME" originalName="XMM701_ACCOUNT_NAME" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ACCOUNT_NAME">
+                        <startPos>400</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_DATE_SETTLE_NOTICE" originalName="XMM701_DATE_SETTLE_NOTICE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DATE_SETTLE_NOTICE">
+                        <startPos>420</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_SETTLE_OTHER_ACC" originalName="XMM701_SETTLE_OTHER_ACC" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_SETTLE_OTHER_ACC">
+                        <startPos>428</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_OCS_DELINQ_IND" originalName="XMM701_OCS_DELINQ_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OCS_DELINQ_IND">
+                        <startPos>443</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_OCS_RISK_CODE" originalName="XMM701_OCS_RISK_CODE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OCS_RISK_CODE">
+                        <startPos>444</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_OCS_RISK_DATE" originalName="XMM701_OCS_RISK_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OCS_RISK_DATE">
+                        <startPos>447</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_OCS_DAYS_DELINQ" originalName="XMM701_OCS_DAYS_DELINQ" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OCS_DAYS_DELINQ">
+                        <startPos>455</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="XMM701_FLEXI_OPTION" originalName="XMM701_FLEXI_OPTION" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_FLEXI_OPTION">
+                        <startPos>458</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_FLEXI_FEE_IND" originalName="XMM701_FLEXI_FEE_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_FLEXI_FEE_IND">
+                        <startPos>463</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_FLEXI_FEE_CONS" originalName="XMM701_FLEXI_FEE_CONS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_FLEXI_FEE_CONS">
+                        <startPos>464</startPos>
+                        <bytes>7</bytes>
+                        <maxBytes>7</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="7" scale="4"/>
+                    </field>
+                    <field name="XMM701_DEBIT_ORDER_TP_DESC" originalName="XMM701_DEBIT_ORDER_TP_DESC" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DEBIT_ORDER_TP_DESC">
+                        <startPos>471</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_FIXED_DO_AMOUNT" originalName="XMM701_FIXED_DO_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_FIXED_DO_AMOUNT">
+                        <startPos>476</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_DEBIT_ORDER_DESC" originalName="XMM701_DEBIT_ORDER_DESC" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DEBIT_ORDER_DESC">
+                        <startPos>491</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_ACCOUNT_TYPE_CAT" originalName="XMM701_ACCOUNT_TYPE_CAT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_ACCOUNT_TYPE_CAT">
+                        <startPos>499</startPos>
+                        <bytes>5</bytes>
+                        <maxBytes>5</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="5" scale="0"/>
+                    </field>
+                    <field name="XMM701_IDUP_DEFAULT_DATE" originalName="XMM701_IDUP_DEFAULT_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_IDUP_DEFAULT_DATE">
+                        <startPos>504</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_IDUP_EXPOSURE" originalName="XMM701_IDUP_EXPOSURE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_IDUP_EXPOSURE">
+                        <startPos>512</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_IDUP_COST_CREDIT" originalName="XMM701_IDUP_COST_CREDIT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_IDUP_COST_CREDIT">
+                        <startPos>527</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_IDUP_STBLCK_IND" originalName="XMM701_IDUP_STBLCK_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_IDUP_STBLCK_IND">
+                        <startPos>542</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_OUTST_CAP_UNPD_BAL" originalName="XMM701_OUTST_CAP_UNPD_BAL" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OUTST_CAP_UNPD_BAL">
+                        <startPos>543</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_UNPD_INT" originalName="XMM701_UNPD_INT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNPD_INT">
+                        <startPos>558</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_UNPD_CHRGS" originalName="XMM701_UNPD_CHRGS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNPD_CHRGS">
+                        <startPos>573</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_BULLET_AMOUNT_28" originalName="XMM701_BULLET_AMOUNT_28" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_BULLET_AMOUNT_28">
+                        <startPos>588</startPos>
+                        <bytes>15</bytes>
+                        <maxBytes>15</maxBytes>
+                        <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                    </field>
+                    <field name="XMM701_DAY_COUNT_IND" originalName="XMM701_DAY_COUNT_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DAY_COUNT_IND">
+                        <startPos>603</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_SKIPHOLIDAY_IND" originalName="XMM701_SKIPHOLIDAY_IND" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_SKIPHOLIDAY_IND">
+                        <startPos>604</startPos>
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="1" scale="0"/>
+                    </field>
+                    <field name="XMM701_GRANTS" originalName="XMM701_GRANTS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS" minOccurs="10" maxOccurs="10">
+                        <startPos>605</startPos>
+                        <bytes>680</bytes>
+                        <maxBytes>680</maxBytes>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="XMM701_DATE_LOAN_GRANTED" originalName="XMM701_DATE_LOAN_GRANTED" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_DATE_LOAN_GRANTED">
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                        </field>
+                        <field name="XMM701_LOAN_AMOUNT" originalName="XMM701_LOAN_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_LOAN_AMOUNT">
+                            <bytes>16</bytes>
+                            <maxBytes>16</maxBytes>
+                            <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                        </field>
+                        <field name="XMM701_TOT_LOAN_GRANTED" originalName="XMM701_TOT_LOAN_GRANTED" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_TOT_LOAN_GRANTED">
+                            <bytes>16</bytes>
+                            <maxBytes>16</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                        </field>
+                        <field name="XMM701_LOAN_TYPE" originalName="XMM701_LOAN_TYPE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_LOAN_TYPE">
+                            <bytes>5</bytes>
+                            <maxBytes>5</maxBytes>
+                            <applicationDatatype datatype="CHAR"/>
+                        </field>
+                        <field name="XMM701_APPROV_MANDATE" originalName="XMM701_APPROV_MANDATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_APPROV_MANDATE">
+                            <bytes>7</bytes>
+                            <maxBytes>7</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="7" scale="0"/>
+                        </field>
+                        <field name="XMM701_ORIG_GRANT1" originalName="XMM701_ORIG_GRANT1" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_GRANTS.XMM701_ORIG_GRANT1">
+                            <bytes>16</bytes>
+                            <maxBytes>16</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="16" scale="0"/>
+                        </field>
+                    </field>
+                    <field name="XMM701_HOLDS" originalName="XMM701_HOLDS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_HOLDS" minOccurs="10" maxOccurs="10">
+                        <startPos>1285</startPos>
+                        <bytes>130</bytes>
+                        <maxBytes>130</maxBytes>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="XMM701_HOLDS_CODE" originalName="XMM701_HOLDS_CODE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_HOLDS.XMM701_HOLDS_CODE">
+                            <bytes>5</bytes>
+                            <maxBytes>5</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="5" scale="0"/>
+                        </field>
+                        <field name="XMM701_HOLDS_DATE" originalName="XMM701_HOLDS_DATE" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_HOLDS.XMM701_HOLDS_DATE">
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                        </field>
+                    </field>
+                    <field name="XMM701_UNCLR" originalName="XMM701_UNCLR" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR" minOccurs="10" maxOccurs="10">
+                        <startPos>1415</startPos>
+                        <bytes>470</bytes>
+                        <maxBytes>470</maxBytes>
+                        <applicationDatatype datatype="ARRAY"/>
+                        <field name="XMM701_DATE_PROCESSED" originalName="XMM701_DATE_PROCESSED" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR.XMM701_DATE_PROCESSED">
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                        </field>
+                        <field name="XMM701_EVENT_NUMBER" originalName="XMM701_EVENT_NUMBER" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR.XMM701_EVENT_NUMBER">
+                            <bytes>9</bytes>
+                            <maxBytes>9</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                        </field>
+                        <field name="XMM701_TRANS_AMOUNT" originalName="XMM701_TRANS_AMOUNT" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR.XMM701_TRANS_AMOUNT">
+                            <bytes>15</bytes>
+                            <maxBytes>15</maxBytes>
+                            <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="15" scale="2"/>
+                        </field>
+                        <field name="XMM701_CLEARANCE_DAYS" originalName="XMM701_CLEARANCE_DAYS" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR.XMM701_CLEARANCE_DAYS">
+                            <bytes>7</bytes>
+                            <maxBytes>7</maxBytes>
+                            <marshaller isSigned="Y" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="7" scale="0"/>
+                        </field>
+                        <field name="XMM701_DATE_CLEARED" originalName="XMM701_DATE_CLEARED" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_UNCLR.XMM701_DATE_CLEARED">
+                            <bytes>8</bytes>
+                            <maxBytes>8</maxBytes>
+                            <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+<typeConverter>ZONEDDECIMAL</typeConverter>
+                            </marshaller>
+                            <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                        </field>
+                    </field>
+                    <field name="XMM701_DATE_8" originalName="XMM701_DATE_8" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_DATE_8">
+                        <startPos>1885</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_TIME_8" originalName="XMM701_TIME_8" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_TIME_8">
+                        <startPos>1893</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="8" scale="0"/>
+                    </field>
+                    <field name="XMM701_CHANGE_FIELD" originalName="XMM701_CHANGE_FIELD" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CHANGE_FIELD">
+                        <startPos>1901</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CHANGE_FROM" originalName="XMM701_CHANGE_FROM" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CHANGE_FROM">
+                        <startPos>1951</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_CHANGE_TO" originalName="XMM701_CHANGE_TO" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_CHANGE_TO">
+                        <startPos>2001</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_TRAN_FUNC" originalName="XMM701_TRAN_FUNC" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_TRAN_FUNC">
+                        <startPos>2051</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="XMM701_BY_7" originalName="XMM701_BY_7" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_BY_7">
+                        <startPos>2060</startPos>
+                        <bytes>7</bytes>
+                        <maxBytes>7</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="7" scale="0"/>
+                    </field>
+                    <field name="XMM701_OVERRIDE_BY" originalName="XMM701_OVERRIDE_BY" included="N" path="XMM701_MSG.XMM701_OUTPUT.XMM701_OVERRIDE_BY">
+                        <startPos>2067</startPos>
+                        <bytes>9</bytes>
+                        <maxBytes>9</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="9" scale="0"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

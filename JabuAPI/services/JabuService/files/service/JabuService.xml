@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns:ns2="http://www.ibm.com/ims/Transaction">
+    <shallow>true</shallow>
+    <serviceName>JabuService</serviceName>
+    <serviceType>ims-rest</serviceType>
+    <resourceType>TRAN</resourceType>
+    <status>1</status>
+    <conversionType>3</conversionType>
+    <dataProtocol>0</dataProtocol>
+    <serviceInputInterface>
+        <metadataName>JabuRequest.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="Segment 1">
+                    <interfaceField included="Y" fieldName="XMM701_MSG">
+                        <field included="N" fieldName="IMSI_LL"/>
+                        <field included="N" fieldName="IMSI_ZZ"/>
+                        <field included="N" fieldName="XMM701_TRAN"/>
+                        <field included="N" fieldName="XMM701_DELIMITER"/>
+                        <field included="N" fieldName="XMM701_FUNCTION"/>
+                        <field included="Y" fieldName="XMM701_INPUT">
+                            <field included="Y" fieldName="XMM701_ACCOUNT_NUMBER"/>
+                        </field>
+                        <field included="N" fieldName="XMM701_OUTPUT">
+                            <field included="N" fieldName="XMM701_ERROR_CODE"/>
+                            <field included="N" fieldName="XMM701_ERROR_DESCR"/>
+                            <field included="N" fieldName="XMM701_CLIENT_TITLE"/>
+                            <field included="N" fieldName="XMM701_CLIENT_INITIALS"/>
+                            <field included="N" fieldName="XMM701_CLIENT_SURNAME"/>
+                            <field included="N" fieldName="XMM701_CLIENT_LANGUAGE"/>
+                            <field included="N" fieldName="XMM701_K061_LOAN_NUMBER"/>
+                            <field included="N" fieldName="XMM701_K081_ACCOUNT_NUMBER"/>
+                            <field included="N" fieldName="XMM701_DATE_OPENED"/>
+                            <field included="N" fieldName="XMM701_OUTSTANDING_BALANCE"/>
+                            <field included="N" fieldName="XMM701_REQOPT"/>
+                            <field included="N" fieldName="XMM701_TERMDATE"/>
+                            <field included="N" fieldName="XMM701_INSTAL_STATUS"/>
+                            <field included="N" fieldName="XMM701_EFF_ACCT_RATE"/>
+                            <field included="N" fieldName="XMM701_COMMITMENT_GROSS"/>
+                            <field included="N" fieldName="XMM701_OLD_ACCOUNT_NO"/>
+                            <field included="N" fieldName="XMM701_OLD_ACCOUNT_PROD"/>
+                            <field included="N" fieldName="XMM701_NOMINATED_ACC_IND"/>
+                            <field included="N" fieldName="XMM701_ORIG_COMM_DATE"/>
+                            <field included="N" fieldName="XMM701_NEW_COMM_DATE"/>
+                            <field included="N" fieldName="XMM701_RETENTION_AMOUNT"/>
+                            <field included="N" fieldName="XMM701_INTEREST_LIMIT"/>
+                            <field included="N" fieldName="XMM701_PERF_GUARANTEE"/>
+                            <field included="N" fieldName="XMM701_FEE_PROVISION"/>
+                            <field included="N" fieldName="XMM701_DEBIT_ORDER_IND"/>
+                            <field included="N" fieldName="XMM701_ORIGINAL_TERM"/>
+                            <field included="N" fieldName="XMM701_ORIG_START_AMOUNT"/>
+                            <field included="N" fieldName="XMM701_NEXT_PAYMENT_DATE"/>
+                            <field included="N" fieldName="XMM701_CONVERT_IND"/>
+                            <field included="N" fieldName="XMM701_REPAYMENT_AMOUNT"/>
+                            <field included="N" fieldName="XMM1WS_REPAYMENT_FREQ"/>
+                            <field included="N" fieldName="XMM701_REM_TERM_YYY"/>
+                            <field included="N" fieldName="XMM701_REM_TERM_MMM"/>
+                            <field included="N" fieldName="XMM701_RATE_TYPE"/>
+                            <field included="N" fieldName="XMM701_JIBAR_TERM"/>
+                            <field included="N" fieldName="XMM701_ACCOUNT_NAME"/>
+                            <field included="N" fieldName="XMM701_DATE_SETTLE_NOTICE"/>
+                            <field included="N" fieldName="XMM701_SETTLE_OTHER_ACC"/>
+                            <field included="N" fieldName="XMM701_OCS_DELINQ_IND"/>
+                            <field included="N" fieldName="XMM701_OCS_RISK_CODE"/>
+                            <field included="N" fieldName="XMM701_OCS_RISK_DATE"/>
+                            <field included="N" fieldName="XMM701_OCS_DAYS_DELINQ"/>
+                            <field included="N" fieldName="XMM701_FLEXI_OPTION"/>
+                            <field included="N" fieldName="XMM701_FLEXI_FEE_IND"/>
+                            <field included="N" fieldName="XMM701_FLEXI_FEE_CONS"/>
+                            <field included="N" fieldName="XMM701_DEBIT_ORDER_TP_DESC"/>
+                            <field included="N" fieldName="XMM701_FIXED_DO_AMOUNT"/>
+                            <field included="N" fieldName="XMM701_DEBIT_ORDER_DESC"/>
+                            <field included="N" fieldName="XMM701_ACCOUNT_TYPE_CAT"/>
+                            <field included="N" fieldName="XMM701_IDUP_DEFAULT_DATE"/>
+                            <field included="N" fieldName="XMM701_IDUP_EXPOSURE"/>
+                            <field included="N" fieldName="XMM701_IDUP_COST_CREDIT"/>
+                            <field included="N" fieldName="XMM701_IDUP_STBLCK_IND"/>
+                            <field included="N" fieldName="XMM701_OUTST_CAP_UNPD_BAL"/>
+                            <field included="N" fieldName="XMM701_UNPD_INT"/>
+                            <field included="N" fieldName="XMM701_UNPD_CHRGS"/>
+                            <field included="N" fieldName="XMM701_BULLET_AMOUNT_28"/>
+                            <field included="N" fieldName="XMM701_DAY_COUNT_IND"/>
+                            <field included="N" fieldName="XMM701_SKIPHOLIDAY_IND"/>
+                            <field included="N" fieldName="XMM701_GRANTS">
+<field included="N" fieldName="XMM701_DATE_LOAN_GRANTED"/>
+<field included="N" fieldName="XMM701_LOAN_AMOUNT"/>
+<field included="N" fieldName="XMM701_TOT_LOAN_GRANTED"/>
+<field included="N" fieldName="XMM701_LOAN_TYPE"/>
+<field included="N" fieldName="XMM701_APPROV_MANDATE"/>
+<field included="N" fieldName="XMM701_ORIG_GRANT1"/>
+                            </field>
+                            <field included="N" fieldName="XMM701_HOLDS">
+<field included="N" fieldName="XMM701_HOLDS_CODE"/>
+<field included="N" fieldName="XMM701_HOLDS_DATE"/>
+                            </field>
+                            <field included="N" fieldName="XMM701_UNCLR">
+<field included="N" fieldName="XMM701_DATE_PROCESSED"/>
+<field included="N" fieldName="XMM701_EVENT_NUMBER"/>
+<field included="N" fieldName="XMM701_TRANS_AMOUNT"/>
+<field included="N" fieldName="XMM701_CLEARANCE_DAYS"/>
+<field included="N" fieldName="XMM701_DATE_CLEARED"/>
+                            </field>
+                            <field included="N" fieldName="XMM701_DATE_8"/>
+                            <field included="N" fieldName="XMM701_TIME_8"/>
+                            <field included="N" fieldName="XMM701_CHANGE_FIELD"/>
+                            <field included="N" fieldName="XMM701_CHANGE_FROM"/>
+                            <field included="N" fieldName="XMM701_CHANGE_TO"/>
+                            <field included="N" fieldName="XMM701_TRAN_FUNC"/>
+                            <field included="N" fieldName="XMM701_BY_7"/>
+                            <field included="N" fieldName="XMM701_OVERRIDE_BY"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceInputInterface>
+    <serviceOutputInterface>
+        <metadataName>JabuResponse.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="Segment 1">
+                    <interfaceField included="Y" fieldName="XMM701_MSG">
+                        <field included="N" fieldName="IMSI_LL"/>
+                        <field included="N" fieldName="IMSI_ZZ"/>
+                        <field included="N" fieldName="XMM701_TRAN"/>
+                        <field included="N" fieldName="XMM701_DELIMITER"/>
+                        <field included="N" fieldName="XMM701_FUNCTION"/>
+                        <field included="N" fieldName="XMM701_INPUT">
+                            <field included="N" fieldName="XMM701_ACCOUNT_NUMBER"/>
+                        </field>
+                        <field included="Y" fieldName="XMM701_OUTPUT">
+                            <field included="Y" fieldName="XMM701_ERROR_CODE"/>
+                            <field included="Y" fieldName="XMM701_ERROR_DESCR"/>
+                            <field included="Y" fieldName="XMM701_CLIENT_TITLE"/>
+                            <field included="Y" fieldName="XMM701_CLIENT_INITIALS"/>
+                            <field included="Y" fieldName="XMM701_CLIENT_SURNAME"/>
+                            <field included="Y" fieldName="XMM701_CLIENT_LANGUAGE"/>
+                            <field included="Y" fieldName="XMM701_K061_LOAN_NUMBER"/>
+                            <field included="Y" fieldName="XMM701_K081_ACCOUNT_NUMBER"/>
+                            <field included="Y" fieldName="XMM701_DATE_OPENED"/>
+                            <field included="Y" fieldName="XMM701_OUTSTANDING_BALANCE"/>
+                            <field included="Y" fieldName="XMM701_REQOPT"/>
+                            <field included="Y" fieldName="XMM701_TERMDATE"/>
+                            <field included="Y" fieldName="XMM701_INSTAL_STATUS"/>
+                            <field included="Y" fieldName="XMM701_EFF_ACCT_RATE"/>
+                            <field included="Y" fieldName="XMM701_COMMITMENT_GROSS"/>
+                            <field included="Y" fieldName="XMM701_OLD_ACCOUNT_NO"/>
+                            <field included="Y" fieldName="XMM701_OLD_ACCOUNT_PROD"/>
+                            <field included="Y" fieldName="XMM701_NOMINATED_ACC_IND"/>
+                            <field included="Y" fieldName="XMM701_ORIG_COMM_DATE"/>
+                            <field included="Y" fieldName="XMM701_NEW_COMM_DATE"/>
+                            <field included="Y" fieldName="XMM701_RETENTION_AMOUNT"/>
+                            <field included="Y" fieldName="XMM701_INTEREST_LIMIT"/>
+                            <field included="Y" fieldName="XMM701_PERF_GUARANTEE"/>
+                            <field included="Y" fieldName="XMM701_FEE_PROVISION"/>
+                            <field included="Y" fieldName="XMM701_DEBIT_ORDER_IND"/>
+                            <field included="Y" fieldName="XMM701_ORIGINAL_TERM"/>
+                            <field included="Y" fieldName="XMM701_ORIG_START_AMOUNT"/>
+                            <field included="Y" fieldName="XMM701_NEXT_PAYMENT_DATE"/>
+                            <field included="Y" fieldName="XMM701_CONVERT_IND"/>
+                            <field included="Y" fieldName="XMM701_REPAYMENT_AMOUNT"/>
+                            <field included="Y" fieldName="XMM1WS_REPAYMENT_FREQ"/>
+                            <field included="Y" fieldName="XMM701_REM_TERM_YYY"/>
+                            <field included="Y" fieldName="XMM701_REM_TERM_MMM"/>
+                            <field included="Y" fieldName="XMM701_RATE_TYPE"/>
+                            <field included="Y" fieldName="XMM701_JIBAR_TERM"/>
+                            <field included="Y" fieldName="XMM701_ACCOUNT_NAME"/>
+                            <field included="Y" fieldName="XMM701_DATE_SETTLE_NOTICE"/>
+                            <field included="Y" fieldName="XMM701_SETTLE_OTHER_ACC"/>
+                            <field included="Y" fieldName="XMM701_OCS_DELINQ_IND"/>
+                            <field included="Y" fieldName="XMM701_OCS_RISK_CODE"/>
+                            <field included="Y" fieldName="XMM701_OCS_RISK_DATE"/>
+                            <field included="Y" fieldName="XMM701_OCS_DAYS_DELINQ"/>
+                            <field included="Y" fieldName="XMM701_FLEXI_OPTION"/>
+                            <field included="Y" fieldName="XMM701_FLEXI_FEE_IND"/>
+                            <field included="Y" fieldName="XMM701_FLEXI_FEE_CONS"/>
+                            <field included="Y" fieldName="XMM701_DEBIT_ORDER_TP_DESC"/>
+                            <field included="Y" fieldName="XMM701_FIXED_DO_AMOUNT"/>
+                            <field included="Y" fieldName="XMM701_DEBIT_ORDER_DESC"/>
+                            <field included="Y" fieldName="XMM701_ACCOUNT_TYPE_CAT"/>
+                            <field included="Y" fieldName="XMM701_IDUP_DEFAULT_DATE"/>
+                            <field included="Y" fieldName="XMM701_IDUP_EXPOSURE"/>
+                            <field included="Y" fieldName="XMM701_IDUP_COST_CREDIT"/>
+                            <field included="Y" fieldName="XMM701_IDUP_STBLCK_IND"/>
+                            <field included="Y" fieldName="XMM701_OUTST_CAP_UNPD_BAL"/>
+                            <field included="Y" fieldName="XMM701_UNPD_INT"/>
+                            <field included="Y" fieldName="XMM701_UNPD_CHRGS"/>
+                            <field included="Y" fieldName="XMM701_BULLET_AMOUNT_28"/>
+                            <field included="Y" fieldName="XMM701_DAY_COUNT_IND"/>
+                            <field included="Y" fieldName="XMM701_SKIPHOLIDAY_IND"/>
+                            <field included="Y" fieldName="XMM701_GRANTS">
+<field included="Y" fieldName="XMM701_DATE_LOAN_GRANTED"/>
+<field included="Y" fieldName="XMM701_LOAN_AMOUNT"/>
+<field included="Y" fieldName="XMM701_TOT_LOAN_GRANTED"/>
+<field included="Y" fieldName="XMM701_LOAN_TYPE"/>
+<field included="Y" fieldName="XMM701_APPROV_MANDATE"/>
+<field included="Y" fieldName="XMM701_ORIG_GRANT1"/>
+                            </field>
+                            <field included="Y" fieldName="XMM701_HOLDS">
+<field included="Y" fieldName="XMM701_HOLDS_CODE"/>
+<field included="Y" fieldName="XMM701_HOLDS_DATE"/>
+                            </field>
+                            <field included="Y" fieldName="XMM701_UNCLR">
+<field included="Y" fieldName="XMM701_DATE_PROCESSED"/>
+<field included="Y" fieldName="XMM701_EVENT_NUMBER"/>
+<field included="Y" fieldName="XMM701_TRANS_AMOUNT"/>
+<field included="Y" fieldName="XMM701_CLEARANCE_DAYS"/>
+<field included="Y" fieldName="XMM701_DATE_CLEARED"/>
+                            </field>
+                            <field included="Y" fieldName="XMM701_DATE_8"/>
+                            <field included="Y" fieldName="XMM701_TIME_8"/>
+                            <field included="Y" fieldName="XMM701_CHANGE_FIELD"/>
+                            <field included="Y" fieldName="XMM701_CHANGE_FROM"/>
+                            <field included="Y" fieldName="XMM701_CHANGE_TO"/>
+                            <field included="Y" fieldName="XMM701_TRAN_FUNC"/>
+                            <field included="Y" fieldName="XMM701_BY_7"/>
+                            <field included="Y" fieldName="XMM701_OVERRIDE_BY"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceOutputInterface>
+    <totalExecCount>0</totalExecCount>
+    <failedCount>0</failedCount>
+    <trancodeOverride>test</trancodeOverride>
+    <trimOutputLeadingWhitespace>false</trimOutputLeadingWhitespace>
+    <trimOutputTrailingWhitespace>true</trimOutputTrailingWhitespace>
+    <escapeOutputControlCharacters>false</escapeOutputControlCharacters>
+    <initializeInputFields>false</initializeInputFields>
+    <omitOutputFieldsByValue>false</omitOutputFieldsByValue>
+    <omitOutputFieldsByValueByte>0x00</omitOutputFieldsByValueByte>
+    <omitOutputEmptyTags>false</omitOutputEmptyTags>
+    <enforceMinArrayOccurrence>false</enforceMinArrayOccurrence>
+    <enforceMinArrayOccurrenceResponse>false</enforceMinArrayOccurrenceResponse>
+</service>

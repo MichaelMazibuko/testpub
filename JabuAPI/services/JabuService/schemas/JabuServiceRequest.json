@@ -1,0 +1,20 @@
+{
+  "type" : "object",
+  "properties" : {
+    "XMM701_MSG" : {
+      "type" : "object",
+      "properties" : {
+        "XMM701_INPUT" : {
+          "type" : "object",
+          "properties" : {
+            "XMM701_ACCOUNT_NUMBER" : {
+              "minimum" : 0,
+              "maximum" : 9999999999999999,
+              "type" : "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}
